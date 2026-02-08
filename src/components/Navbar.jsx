@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const handleLinkClick = () => setOpen(false);
+
+  useEffect(() => {
+    // Lock body scroll when mobile menu is open
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [open]);
 
   return (
     <nav className="navbar">
