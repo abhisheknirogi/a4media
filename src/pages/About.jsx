@@ -2,18 +2,21 @@ export default function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-        <div className="about-image">
-          {/* Replace this URL with a photo of your team or studio */}
-          <img 
-            src="https://images.unsplash.com/photo-1551503766-ac63dfa6401c?w=800" 
-            alt="A4 Media Agency Studio" 
-          />
-        </div>
+      <div className="about-image">
+  <video
+    src="/files/about_image.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="about-video"
+  />
+</div>
+
         
         <div className="about-text">
-          <h1>A4 MEDIA</h1>
-          <p className="subtitle">Visual Excellence. Scalable Growth.</p>
-          
+          <h1>ABOUT</h1>
+                  
           <p>
             A4 Media is a premier creative agency specializing in high-impact visual storytelling. 
             We bridge the gap between cinematic production and digital strategy, helping brands 

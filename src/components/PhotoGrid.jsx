@@ -17,7 +17,7 @@ export default function PhotoGrid() {
       {placeholders.map((item, index) => (
         <div key={index} className="photo-card-static">
           <div className="photo-image-container">
-            <img src={item.image} alt={item.title} />
+            <img src={item.image} alt={item.title} loading="lazy" />
             <div className="photo-overlay-static">
               <span className="photo-tag">{item.category}</span>
               <h4>{item.title}</h4>

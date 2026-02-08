@@ -3,13 +3,15 @@ import React, { useRef, useState, useEffect } from 'react';
 export default function VideoCard({ video }) {
   const videoRef = useRef(null);
   const modalRef = useRef(null);
+  const iframeRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [isBuffering, setIsBuffering] = useState(false);
 
-  // Identify if it's a video file
+  // Identify if it's a video file or a YouTube embed
   const isVideoFile = video.thumbnail?.toLowerCase().endsWith('.mp4') || 
                       video.thumbnail?.toLowerCase().endsWith('.webm');
+  const isYouTube = Boolean(video.youtubeId);
 
   // Handle Play Button Click
   const handlePlayClick = (e) => {
@@ -139,9 +141,24 @@ export default function VideoCard({ video }) {
                 className="video-preview"
                 muted
                 playsInline
+                preload="metadata"
               >
                 <source src={video.thumbnail} type="video/mp4" />
               </video>
+              <button className="play-button" onClick={handlePlayClick} aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </>
+          ) : isYouTube ? (
+            <>
+              <img
+                src={video.thumbnail || `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                alt={video.title}
+                className="video-preview"
+                loading="lazy"
+              />
               <button className="play-button" onClick={handlePlayClick} aria-label="Play video">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z" />
@@ -153,6 +170,7 @@ export default function VideoCard({ video }) {
               src={video.thumbnail} 
               alt={video.title} 
               className="video-preview" 
+              loading="lazy"
             />
           )}
         </div>
@@ -165,7 +183,7 @@ export default function VideoCard({ video }) {
       </div>
 
       {/* VIDEO MODAL PLAYER */}
-      {showModal && isVideoFile && (
+      {showModal && (isVideoFile || isYouTube) && (
         <div className="video-modal-overlay" onClick={handleCloseModal} ref={modalRef}>
           <button className="modal-close" onClick={handleCloseModal} aria-label="Close video">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -179,21 +197,34 @@ export default function VideoCard({ video }) {
               </div>
             ) : (
               <>
-                <video
-                  ref={videoRef}
-                  className="modal-video"
-                  controls
-                  autoPlay
-                  playsInline
-                  crossOrigin="anonymous"
-                  onError={handleVideoError}
-                  onLoadedData={handleVideoLoad}
-                  onPlay={handleVideoPlay}
-                  onWaiting={handleWaiting}
-                >
-                  <source src={video.thumbnail} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {isYouTube ? (
+                  <iframe
+                    ref={iframeRef}
+                    className="modal-video"
+                    title={video.title}
+                    src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1&autoplay=1&playsinline=1`}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media; fullscreen"
+                    allowFullScreen
+                  />
+                ) : (
+                  <video
+                    ref={videoRef}
+                    className="modal-video"
+                    controls
+                    autoPlay
+                    playsInline
+                    crossOrigin="anonymous"
+                    preload="metadata"
+                    onError={handleVideoError}
+                    onLoadedData={handleVideoLoad}
+                    onPlay={handleVideoPlay}
+                    onWaiting={handleWaiting}
+                  >
+                    <source src={video.thumbnail} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
                 {isBuffering && (
                   <div style={{
                     position: 'absolute',
