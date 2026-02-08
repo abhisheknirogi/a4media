@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-      <div className="about-image">
+     <div className="about-video-wrapper">
   <video
     src="/files/about_image.mp4"
     autoPlay
@@ -12,6 +12,7 @@ export default function About() {
     className="about-video"
   />
 </div>
+
 
         
         <div className="about-text">
