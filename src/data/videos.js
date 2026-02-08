@@ -15,24 +15,17 @@ export const videoData = [
     youtubeId: "vwfsXYPBhJE",
     category: "Short Form",
   },
+  
   {
     id: 3,
     type: "short",
     title: "Example 3",
-    thumbnail: "https://img.youtube.com/vi/51lvYfyQmko/hqdefault.jpg",
-    youtubeId: "51lvYfyQmko",
-    category: "Short Form",
-  },
-  {
-    id: 4,
-    type: "short",
-    title: "Example 4",
     thumbnail: "https://img.youtube.com/vi/NXGZQdGTZI8/hqdefault.jpg",
     youtubeId: "NXGZQdGTZI8",
     category: "Short Form",
   },
   {
-    id: 5,
+    id: 4,
     type: "long",
     title: "Long Form Content 1",
     thumbnail: "https://img.youtube.com/vi/EhT2Iua4Jo4/hqdefault.jpg",
@@ -41,7 +34,7 @@ export const videoData = [
    
   },
   {
-    id: 6,
+    id: 5,
     type: "long",
     title: "Long Form Content 2",
     thumbnail: "https://img.youtube.com/vi/HKeVPnB7O20/hqdefault.jpg",
@@ -50,10 +43,19 @@ export const videoData = [
    
   },
   {
+    id: 6,
+    type: "graphics",
+    title: "Motion Graphics",
+    thumbnail: "https://img.youtube.com/vi/gjFL5mijvA4/hqdefault.jpg", 
+    youtubeId: "gjFL5mijvA4", 
+    category: "VFX / Motion",
+  },
+ {
     id: 7,
     type: "graphics",
     title: "Motion Graphics",
-    thumbnail: "/videos/motion graphics.mp4", 
+    thumbnail: "https://img.youtube.com/vi/4fEzrNC4FdM/hqdefault.jpg", 
+    youtubeId: "4fEzrNC4FdM", 
     category: "VFX / Motion",
-  }
+  },
 ];

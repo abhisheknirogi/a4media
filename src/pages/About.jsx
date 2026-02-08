@@ -2,16 +2,14 @@ export default function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-     <div className="about-video-wrapper">
-  <video
-    src="/files/about_image.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
+    <div className="about-video-wrapper">
+  <img
+    src="/files/about.jpeg"
+    alt="About A4Media"
     className="about-video"
   />
 </div>
+
 
 
         
@@ -31,7 +29,7 @@ export default function About() {
 
           <div className="about-stats">
             <div className="stat-item">
-              <strong>5M+</strong>
+              <strong>50M+</strong>
               <span>Total Views</span>
             </div>
             <div className="stat-item">
