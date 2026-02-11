@@ -15,7 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 (function initRevealObserver() {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
-  const revealSelector = 'section, .section-padding, .card, .main-content > *, .photo-card, .photo-card-static';
+const revealSelector = '.card, .photo-card, .video-card';
+
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

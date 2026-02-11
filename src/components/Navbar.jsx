@@ -1,13 +1,23 @@
+
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
+  
   const [open, setOpen] = useState(false);
+  
 
+  // Close menu when a link is clicked
   const handleLinkClick = () => setOpen(false);
 
   useEffect(() => {
-    // Lock body scroll when mobile menu is open
-    document.body.style.overflow = open ? 'hidden' : '';
+    // Prevent scrolling the background when the mobile menu is open
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    // Cleanup on unmount
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
@@ -17,38 +27,35 @@ export default function Navbar() {
         {/* Branding Section */}
         <a href="#top" className="nav-logo-link" onClick={handleLinkClick}>
           <div className="logo-box" style={{ 
-            background: 'var(--primary)', 
-            color: 'var(--bg-dark)', 
+            background: 'var(--primary, #00ffcc)', 
+            color: '#000', 
             padding: '2px 10px', 
             borderRadius: '6px', 
             fontWeight: '900',
-            fontSize: '1.1rem',
-            boxShadow: '0 0 15px var(--primary-glow)'
+            fontSize: '1.1rem'
           }}>A4</div>
           <span className="nav-brand-name">MEDIA</span>
         </a>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle Button */}
         <button
           className={`nav-toggle ${open ? 'open' : ''}`}
           aria-expanded={open}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          onClick={() => setOpen((s) => !s)}
+          aria-label="Toggle navigation"
+          onClick={() => setOpen(!open)}
         >
           <span className="hamburger" />
         </button>
 
         {/* Navigation Links */}
         <div className={`nav-links ${open ? 'open' : ''}`}>
-          {/* Main Services */}
           <a href="#about" className="nav-item" onClick={handleLinkClick}>Agency</a>
           <a href="#short-form" className="nav-item" onClick={handleLinkClick}>Shorts</a>
           <a href="#long-form" className="nav-item" onClick={handleLinkClick}>Long Form</a>
           <a href="#web-design" className="nav-item" onClick={handleLinkClick}>Web Engineering</a>
-
-          {/* Social Proof Link */}
+          
           <a 
-            href="https://www.instagram.com/a4mediaofficial?igsh=MWl2eXZ1bjhyczMwag==" 
+            href="https://www.instagram.com/a4mediaofficial" 
             target="_blank" 
             rel="noopener noreferrer"
             className="nav-item nav-social"
@@ -57,8 +64,9 @@ export default function Navbar() {
             Instagram
           </a>
 
-          {/* Primary CTA */}
-          <a href="#contact" className="nav-item contact-btn" onClick={handleLinkClick}>Start Project</a>
+          <a href="#contact" className="nav-item contact-btn" onClick={handleLinkClick}>
+            Start Project
+          </a>
         </div>
       </div>
     </nav>

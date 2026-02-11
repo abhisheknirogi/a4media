@@ -21,8 +21,8 @@ export default function WebDev() {
       {/* Intro Header */}
       <div className="dev-intro">
         <span className="dev-badge">Development Division</span>
-        <h3>Engineering the Next Digital Standard</h3>
-        <p>Beyond design. We build high-speed, scalable infrastructure for brands that demand performance.</p>
+        <h3>Redefining What Digital Excellence Means</h3>
+        <p>We go beyond design, building scalable, performance-driven digital infrastructure for ambitious brands.</p>
       </div>
 
       {/* Case Studies Grid */}
@@ -39,7 +39,7 @@ export default function WebDev() {
               </div>
 
               <a href={proj.link} target="_blank" rel="noopener noreferrer" className="live-link">
-                Explore Live Project <span>↗</span>
+                Visit Live Demo <span>↗</span>
               </a>
             </div>
           </div>

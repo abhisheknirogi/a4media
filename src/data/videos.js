@@ -42,10 +42,19 @@ export const videoData = [
     category: "Long Form",
    
   },
+   {
+    id: 6,
+    type: "long",
+    title: "Long Form Content 3",
+    thumbnail: "https://img.youtube.com/vi/uvNkdAggUGU/hqdefault.jpg",
+    youtubeId: "uvNkdAggUGU",
+    category: "Long Form",
+   
+  },
   {
     id: 6,
     type: "graphics",
-    title: "Motion Graphics",
+    title: "Motion Graphics 1",
     thumbnail: "https://img.youtube.com/vi/gjFL5mijvA4/hqdefault.jpg", 
     youtubeId: "gjFL5mijvA4", 
     category: "VFX / Motion",
@@ -53,9 +62,17 @@ export const videoData = [
  {
     id: 7,
     type: "graphics",
-    title: "Motion Graphics",
+    title: "Motion Graphics 2",
     thumbnail: "https://img.youtube.com/vi/4fEzrNC4FdM/hqdefault.jpg", 
     youtubeId: "4fEzrNC4FdM", 
+    category: "VFX / Motion",
+  },
+  {
+    id: 8,
+    type: "graphics",
+    title: "Motion Graphics 3",
+    thumbnail: "https://img.youtube.com/vi/9mMYGZ1x6ao/hqdefault.jpg", 
+    youtubeId: "9mMYGZ1x6ao", 
     category: "VFX / Motion",
   },
 ];

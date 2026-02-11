@@ -165,6 +165,54 @@ section:nth-child(even) {
 .nav-item:hover::after {
   width: 100%;
 }
+/* ================= MOBILE NAVBAR FIX ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: var(--text-main);
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    height: calc(100vh - 70px);
+    width: 260px;
+    background: rgba(10, 14, 39, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    transition: 0.4s ease;
+    border-left: 1px solid rgba(0, 217, 255, 0.1);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+}
 
 /* Special Button in Nav */
 .contact-btn {
@@ -1705,4 +1753,54 @@ body {
 }
 button:hover, .contact-btn:hover, .instagram-link:hover {
   transform: translateY(-3px) scale(1.03);
+}
+/* Scroll Reveal Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  filter: blur(6px);
+  transition:
+    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1s ease;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.05s; }
+.delay-2 { transition-delay: 0.12s; }
+.delay-3 { transition-delay: 0.2s; }
+.delay-4 { transition-delay: 0.3s; }
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    height: calc(100vh - 70px);
+    width: 260px;
+    background: rgba(10, 14, 39, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    transition: 0.4s ease;
+    border-left: 1px solid rgba(0, 217, 255, 0.1);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
 }

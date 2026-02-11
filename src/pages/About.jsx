@@ -17,14 +17,11 @@ export default function About() {
           <h1>ABOUT</h1>
                   
           <p>
-            A4 Media is a premier creative agency specializing in high-impact visual storytelling. 
-            We bridge the gap between cinematic production and digital strategy, helping brands 
-            and creators dominate social platforms through precision editing and innovative VFX.
+          A4 Media is a premier creative agency specializing in high-impact visual storytelling, web development, and digital growth. We bridge cinematic production, modern web experiences, and data-driven SEO to help brands and creators dominate social and search platforms through precision editing, innovative VFX, and performance-optimized websites.
           </p>
 
           <p style={{ marginTop: '15px', color: 'var(--text-muted)' }}>
-            From viral short-form hooks to immersive long-form documentaries, our mission is to 
-            turn viewers into loyal followers.
+           We turn attention into loyalty across short-form virality and long-form storytelling.
           </p>
 
           <div className="about-stats">
@@ -56,7 +53,7 @@ export default function About() {
                 gap: '8px'
               }}
             >
-              View Portfolio on Instagram <span style={{ fontSize: '1.2rem' }}>→</span>
+              View us on Instagram <span style={{ fontSize: '1.2rem' }}>→</span>
             </a>
           </div>
         </div>
