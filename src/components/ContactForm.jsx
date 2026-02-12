@@ -10,7 +10,7 @@ export default function ContactForm() {
     setStatus("Sending...");
 
     // Replace these with your actual IDs from EmailJS
-    const SERVICE_ID = "your_service_id";
+    const SERVICE_ID = "service_uz99ay9";
     const TEMPLATE_ID = "your_template_id";
     const PUBLIC_KEY = "your_public_key";
 

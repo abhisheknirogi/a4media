@@ -5,7 +5,7 @@ export default function WebDev() {
       subtitle: "Front-end Portfolio showcase",
       description: "A high-performance real estate platform featuring dynamic filtering and optimized lead capture.",
       tech: ["React", "Vercel","CSS"],
-      link: "https://kalyani-khaki.vercel.app/"
+      link: "https://www.glownbride.com"
     },
     {
       title: "Personal Portfolio v1",
