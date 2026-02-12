@@ -1,7 +1,7 @@
 export default function WebDev() {
   const projects = [
     {
-      title: "Beauty Box",
+      title: "Glown n' Bride",
       subtitle: "Front-end Portfolio showcase",
       description: "A high-performance real estate platform featuring dynamic filtering and optimized lead capture.",
       tech: ["React", "Vercel","CSS"],
