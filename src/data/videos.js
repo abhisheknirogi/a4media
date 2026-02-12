@@ -2,7 +2,7 @@ export const videoData = [
   {
     id: 1,
     type: "short",
-    title: "Example 1",
+    title: "Typography",
     thumbnail: "https://img.youtube.com/vi/3oNNnrGcXtQ/hqdefault.jpg",
     youtubeId: "3oNNnrGcXtQ",
     category: "Short Form",
@@ -10,7 +10,7 @@ export const videoData = [
   {
     id: 2,
     type: "short",
-    title: "Example 2",
+    title: "Talking Head",
     thumbnail: "https://img.youtube.com/vi/vwfsXYPBhJE/hqdefault.jpg",
     youtubeId: "vwfsXYPBhJE",
     category: "Short Form",
@@ -19,7 +19,7 @@ export const videoData = [
   {
     id: 3,
     type: "short",
-    title: "Example 3",
+    title: "Anime Edit",
     thumbnail: "https://img.youtube.com/vi/NXGZQdGTZI8/hqdefault.jpg",
     youtubeId: "NXGZQdGTZI8",
     category: "Short Form",
@@ -27,7 +27,7 @@ export const videoData = [
   {
     id: 4,
     type: "long",
-    title: "Long Form Content 1",
+    title: "In Real Life Content",
     thumbnail: "https://img.youtube.com/vi/EhT2Iua4Jo4/hqdefault.jpg",
     youtubeId: "EhT2Iua4Jo4",
     category: "Long Form",
@@ -36,7 +36,7 @@ export const videoData = [
   {
     id: 5,
     type: "long",
-    title: "Long Form Content 2",
+    title: "Podcast",
     thumbnail: "https://img.youtube.com/vi/HKeVPnB7O20/hqdefault.jpg",
     youtubeId: "HKeVPnB7O20",
     category: "Long Form",
@@ -45,7 +45,7 @@ export const videoData = [
    {
     id: 6,
     type: "long",
-    title: "Long Form Content 3",
+    title: "Documentary",
     thumbnail: "https://img.youtube.com/vi/uvNkdAggUGU/hqdefault.jpg",
     youtubeId: "uvNkdAggUGU",
     category: "Long Form",
@@ -54,7 +54,7 @@ export const videoData = [
   {
     id: 6,
     type: "graphics",
-    title: "Motion Graphics 1",
+    title: "Video Graphics",
     thumbnail: "https://img.youtube.com/vi/gjFL5mijvA4/hqdefault.jpg", 
     youtubeId: "gjFL5mijvA4", 
     category: "VFX / Motion",
@@ -62,7 +62,7 @@ export const videoData = [
  {
     id: 7,
     type: "graphics",
-    title: "Motion Graphics 2",
+    title: "Pure Graphics",
     thumbnail: "https://img.youtube.com/vi/4fEzrNC4FdM/hqdefault.jpg", 
     youtubeId: "4fEzrNC4FdM", 
     category: "VFX / Motion",
@@ -70,7 +70,7 @@ export const videoData = [
   {
     id: 8,
     type: "graphics",
-    title: "Motion Graphics 3",
+    title: "Text Graphics",
     thumbnail: "https://img.youtube.com/vi/9mMYGZ1x6ao/hqdefault.jpg", 
     youtubeId: "9mMYGZ1x6ao", 
     category: "VFX / Motion",

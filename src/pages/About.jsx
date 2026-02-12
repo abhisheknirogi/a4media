@@ -17,18 +17,20 @@ export default function About() {
           <h1>ABOUT</h1>
                   
           <p>
-          A4 Media is a premier creative agency specializing in high-impact visual storytelling, web development, and digital growth. We bridge cinematic production, modern web experiences, and data-driven SEO to help brands and creators dominate social and search platforms through precision editing, innovative VFX, and performance-optimized websites.
+          A4 Media is a creative studio focused on video editing and digital design.
+We help brands and creators produce content that looks sharp, feels intentional, and performs online.
           </p>
 
           <p style={{ marginTop: '15px', color: 'var(--text-muted)' }}>
-           We turn attention into loyalty across short-form virality and long-form storytelling.
+         From short-form videos to long-form projects, we focus on strong visuals and clean execution.
+
           </p>
 
           <div className="about-stats">
             <div className="stat-item">
               <strong>50M+</strong>
               <span>Total Views</span>
-            </div>
+            </div> 
             <div className="stat-item">
               <strong>15+</strong>
               <span>Global Clients</span>
