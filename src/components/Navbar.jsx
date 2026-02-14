@@ -21,6 +21,24 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  // Close menu when viewport is resized to desktop width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) setOpen(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Close on Escape when mobile menu is open
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [open]);
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -44,7 +62,11 @@ export default function Navbar() {
           aria-label="Toggle navigation"
           onClick={() => setOpen(!open)}
         >
-          <span className="hamburger" />
+          <span className="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
 
         {/* Navigation Links */}
